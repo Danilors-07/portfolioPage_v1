@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+
+:root {
+    --mainColor: #1A374D;
+    --secondColor: #406882;
+    --thirdColor: #6998AB;
+    --lastColor: #B1D0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--mainColor);
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh; /* min-height: 100vh */
+    align-items: center;
+}
+
+#welcome-section h1 {
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+#welcome-section p {
+    color: var(--thirdColor);
+    font-size: 2rem;
+    padding-top: 16px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ////////// Projects Section ///////////////// */
+#projects {
+    background-color: var(--secondColor);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-container {
+    background-color: var(--secondColor);
+    padding: 1rem;
+    max-width: 1000px;
+}
+
+.projectTitle {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    font-size: 2.3rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.underline {
+    border-bottom: 1.5px solid #fff;
+    width: 40%;
+    margin: 0 auto 2rem;
+}
+
+/* Windows Projects  */
+
+
+.content {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+    width: 100vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 1rem;
+}
+.projectWindow {
+    background-color: #bb7b1b;
+    box-shadow: 5px 3px 16px 0px rgba(0,0,0,0.61);
+    cursor: pointer;
+
+}
+
+.projectWindow img {
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 205px;
+}
+
+.projectWindow h2 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    padding: 1rem;
+    text-align: center;
+}
+
+.projectWindow .hiddenEl {
+    color: #bb7b1b;
+    transition: color 0.3s ease-out;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.projectWindow:hover .hiddenEl {
+    color: var(--mainColor);
+}
+
+/* /////////////Nav Bar /////////////////// */
+nav {
+    position: fixed;
+    background-color: #bb7b1b;
+    width: 100vw;
+    padding: 1.1rem;
+    text-align: right;
+}
+
+nav a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500; 
+    margin-right: 2rem;
+}
+
+/* ///////// Contact Center ////////////// */
+.contact {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.61);
+    padding: 15rem 0 15rem 0;
+    color: #fff;
+}
+.contact h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    white-space: nowrap;
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.contact i {
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-weight: 400;
+}
+
+.contact span {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.icons a{
+    text-decoration: none;
+    color: #fff;
+    font-family: inherit;
+}
+
+@media (min-width: 740px) and (max-width: 1090px) {
+    .content {
+        display: grid;
+        grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
+        max-width: 880px;
+        width: 100vw;
+    margin: 1rem auto;
+    gap: 2rem;
+    padding: 1rem;
+}
+        .projectWindow img {
+            max-width: 100%;
+            max-height: 100%;
+            min-height: 270px;
+        }
+}
+
+@media (max-width: 739px) 
+{    
+    .content {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    padding: 1rem;
+    };
+        .projectWindow img {
+            max-width: 100%;
+            max-height: 100%;
+        };
+};
